@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select City & Area</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='css/camfind.css') }}">
+</head>
+<body>
+  <h1>Select City & Area</h1>
+  <div class="form-container">
+    <label for="city">City:</label>
+    <select id="city" name="city" required>
+      <option value="">Select City</option>
+      <option value="Ahmedabad">Ahmedabad</option>
+    </select>
+    
+    <label for="area">Area:</label>
+    <select id="area" name="area" required>
+      <option value="">Select Area</option>
+    </select>
+    
+    <button type="submit">Submit</button>
+  </div>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Street Name</th>
+          <th>Pincode</th>
+          <th>Latitude & Longitude</th>
+          <th>Camera Links</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>C.G. Road</td>
+          <td>380009</td>
+          <td>23.0267°N, 72.5625°E</td>
+          <td><a href="#cam1">Cam1</a></td>
+        </tr>
+        <tr>
+          <td>Law Garden</td>
+          <td>380006</td>
+          <td>23.0225°N, 72.5714°E</td>
+          <td><a href="#cam1">Cam1</a></td>
+        </tr>
+        <tr>
+          <td>S.G. Highway</td>
+          <td>380054</td>
+          <td>23.0790°N, 72.5063°E</td>
+          <td><a href="#cam1">Cam1</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

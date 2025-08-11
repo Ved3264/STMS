@@ -1,0 +1,134 @@
+body {
+    font-family: 'Times New Roman', sans-serif;
+    margin: 0 auto;
+    padding: 0 auto;
+    background-color: #f4f4f4;
+}
+.container {
+    width: 80%;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    font-size: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background: #f4f4f4;
+    font-weight: bold;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+}
+
+.status span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.status-active { 
+    color: green; 
+}
+.status-suspended { 
+    color: red; 
+}
+.status-inactive { 
+    color: orange; 
+}
+.action-buttons {
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.action-buttons button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.action-buttons button .gear {
+    color: #007bff;
+}
+
+.action-buttons button .trash {
+    color: red;
+}
+
+.pagination {
+    margin-top: 10px;
+    text-align: center;
+}
+.pagination button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.pagination .active {
+    background: #0056b3;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 15px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+}
+
+.toolbar button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.toolbar button:hover {
+    background-color: #0056b3;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.profile span {
+    font-size: 1em;
+}

@@ -1,0 +1,111 @@
+/* Apply Google Font */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+/* Vertical Navigation Bar */
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.nav-link {
+    font-size: 1rem;
+    color: #333;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 100px; /* Matches sidebar width (250px) + padding */
+    padding: 20px;
+}
+
+/* Style for the section heading */
+.main-content h5 {
+    font-size: 1.25rem; /* Slightly larger for emphasis */
+    font-weight: 500;   /* Medium weight for clarity */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #333;        /* Dark gray for contrast */
+}
+
+/* Style for the signal box */
+.signal-box {
+    background-color: #ffffff; /* White background for contrast */
+    border: 1px solid #ddd;   /* Subtle border */
+    border-radius: 8px;       /* Rounded corners for a modern look */
+    padding: 20px;            /* Internal spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition on hover */
+}
+
+/* Hover effect for the signal box */
+.signal-box:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+}
+
+/* Style for the signal box heading */
+.signal-box h6 {
+    font-size: 1.1rem;   /* Slightly larger than body text */
+    font-weight: 700;    /* Bold for emphasis */
+    margin-bottom: 15px; /* Space below the heading */
+    color: #007bff;      /* Blue to match the theme */
+}
+
+/* Style for the unordered list */
+.signal-box ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;            /* Remove default padding */
+    margin: 0;             /* Remove default margin */
+}
+
+/* Style for list items */
+.signal-box li {
+    font-size: 1rem;      /* Standard readable size */
+    margin-bottom: 10px;  /* Space between items */
+    color: #555;          /* Medium gray for readability */
+}
+
+/* Style for the timer paragraph */
+.signal-box p {
+    font-size: 1rem;      /* Matches list item size */
+    font-weight: 500;     /* Slightly bold for emphasis */
+    margin-top: 15px;     /* Space above the timer */
+    color: #333;          /* Dark gray for contrast */
+}
+
+/* Style for the timer value */
+.signal-box p span#timer {
+    font-weight: 700;     /* Bold to highlight the timer */
+    color: #007bff;       /* Blue to match the heading */
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/login.css') }}">
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card p-4 shadow-lg">
+                <h3 class="text-center text-primary">Login</h3>
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100" id="loginButton">Login</button>
+                </form>
+                <div class="mt-3" id="error-message" class="alert alert-danger d-none"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url_for('static', path='js/loginjs.js') }}"></script>
+<script>
+    $(document).ready(function() {
+    $("#loginForm").submit(function(event) {
+        event.preventDefault();
+
+        var email = $("#email").val();
+        var password = $("#password").val();
+
+        $.ajax({
+            url: "http://127.0.0.1:8000/auth/logintoken",
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({
+                email: email,
+                password: password
+            }),
+            success: function(response) {
+                if (response.access_token) {
+                    alert("Login successful!");
+                    document.cookie = `access_token=${response.access_token}; path=/; HttpOnly`;
+                    window.location.href = "/auth/home";
+                } else {
+                    $("#error-message").text("Invalid credentials").removeClass("d-none");
+                }
+            },
+            error: function(xhr) {
+                $("#error-message").text("Login failed!").removeClass("d-none");
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>

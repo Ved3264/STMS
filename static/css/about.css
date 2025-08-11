@@ -1,0 +1,76 @@
+body {
+    font-family: 'Times New Roman', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Vertical Navigation Bar */
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Increased width for better alignment */
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    align-items: center; /* Center content inside sidebar */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.nav-link {
+    font-size: 1rem;
+    color: #333;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    width: 100%;
+}
+
+.nav-link:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px; /* Adjusted margin to match sidebar width */
+    padding: 20px;
+    color: #007bff;
+}
+
+/* Colorful Icons */
+.icon-container i {
+    font-size: 3rem;
+    margin: 10px;
+}
+
+.icon-container .fa-brain {
+    color: #ff5733;
+}
+
+.icon-container .fa-video {
+    color: #33b5e5;
+}
+
+.icon-container .fa-cloud {
+    color: #ffbb33;
+}
+
+.icon-container .fa-chart-line {
+    color: #00c851;
+}

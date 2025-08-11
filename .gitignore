@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.so
+
+# Virtual environment
+venv/
+.env/
+.env.bak/
+.venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Logs
+*.log
+logs/
+wandb/
+runs/
+
+# Data
+*.csv
+*.json
+*.xml
+*.yaml
+*.yml
+*.txt
+data/
+dataset/
+datasets/
+
+# YOLO-specific
+weights/
+*.pt
+*.onnx
+*.engine
+*.tflite
+*.pb
+*.savedmodel
+
+# Results
+output/
+outputs/
+results/
+inference/
+exp*/
+labels/
+
+# IDE settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
